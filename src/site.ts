@@ -8,11 +8,15 @@ export const site = {
     { number: 'II', title: 'Contratación pública', description: 'Asesoría en planificación, ejecución contractual, prevención de controversias y procedimientos relacionados con la contratación pública.' },
     { number: 'III', title: 'Dispute Boards', description: 'Asesoría en la prevención y gestión temprana de controversias durante la ejecución de proyectos.' },
   ],
-  publications: [] as { title: string; date: string; description: string; url: string }[],
+  pillars: ['Análisis jurídico', 'Estrategia contractual', 'Comprensión del proyecto'],
+  publications: [] as { title: string; date: string; medium?: string; description: string; url: string }[],
 }
 export const navigation = [
-  { id: 'inicio', label: 'Inicio' }, { id: 'sobre-mi', label: 'Sobre mí' },
+  { id: 'inicio', label: 'Inicio' }, { id: 'sobre-mi', label: 'Enfoque' },
   { id: 'areas-de-practica', label: 'Áreas de práctica' }, { id: 'publicaciones', label: 'Publicaciones' }, { id: 'contacto', label: 'Contacto' },
 ]
 
-export const whatsappUrl = `https://wa.me/${site.contact.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent('Hola Aarón, quisiera realizar una consulta sobre sus servicios.')}`
+export function getWhatsappUrl(message = 'Hola Aarón, quisiera realizar una consulta sobre sus servicios.') {
+  return `https://wa.me/${site.contact.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`
+}
+export const whatsappUrl = getWhatsappUrl()
