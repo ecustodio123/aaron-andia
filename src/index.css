@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+@import './fonts.css';
 @import 'tailwindcss';
 :root {
   font-family: 'Inter', sans-serif;
@@ -6,7 +7,10 @@
   text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;
   --black: #0b0b0b; --black-secondary: #171717; --white: #fff;
   --warm: #f7f6f2; --gold: #b99a52; --gold-dark: #80672e;
-  --gray: #666; --muted: #aaa; --serif: 'Cormorant Garamond', Georgia, serif;
+  --gray: #666; --muted: #aaa;
+  --font-editorial: 'Newsreader Variable', 'Newsreader', Georgia, serif;
+  --font-brand: 'Cormorant Garamond', Georgia, serif;
+  --serif: var(--font-editorial);
   --header-height: 72px; --section-space: 64px;
 }
 * { box-sizing: border-box; }
@@ -17,10 +21,10 @@ button { font: inherit; cursor: pointer; border: 0; }
 a, button { -webkit-tap-highlight-color: transparent; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
 h1, h2, h3, p { margin: 0; }
-h1, h2, h3 { font-family: var(--serif); font-weight: 600; }
+h1, h2, h3 { font-family: var(--font-editorial); font-optical-sizing: auto; font-weight: 400; }
 h1:focus, h2:focus, main:focus { outline: none; }
-h2 { font-size: 36px; line-height: 1.08; letter-spacing: -.025em; }
-h3 { font-size: 28px; line-height: 1.15; }
+h2 { font-size: 36px; line-height: 1.10; letter-spacing: -.015em; }
+h3 { font-size: 28px; font-weight: 500; line-height: 1.15; letter-spacing: -.01em; }
 p { max-width: 65ch; font-size: 16px; line-height: 1.65; }
 img { max-width: 100%; display: block; }
 section[id], main[id] { scroll-margin-top: calc(var(--header-height) + 16px); }
