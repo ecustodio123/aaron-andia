@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b0b0b"/>
+  <path d="M0 3H1200" stroke="#b99a52" stroke-width="6"/>
+  <text x="930" y="510" text-anchor="middle" font-family="Georgia,serif" font-size="550" fill="#141411">A</text>
+  <path d="M78 91H142" stroke="#b99a52" stroke-width="2"/>
+  <text x="162" y="97" font-family="Arial,sans-serif" font-size="14" letter-spacing="3.5" fill="#cbb47f">ESTRATEGIA JURÍDICA. VISIÓN DE PROYECTO.</text>
+  <text x="72" y="260" font-family="Georgia,serif" font-weight="bold" font-size="103" letter-spacing="-2" fill="#f7f6f2">AARÓN ANDÍA</text>
+  <text x="80" y="311" font-family="Arial,sans-serif" font-size="19" letter-spacing="7" fill="#cbb47f">ABOGADO | ÁRBITRO</text>
+  <text x="78" y="390" font-family="Arial,sans-serif" font-size="25" fill="#dbd9d3">Resolución estratégica de controversias</text>
+  <text x="78" y="428" font-family="Arial,sans-serif" font-size="25" fill="#dbd9d3">en proyectos públicos e infraestructura.</text>
+  <path d="M78 499H1122" stroke="#38342b"/>
+  <text x="78" y="548" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#cbb47f">ARBITRAJE</text>
+  <circle cx="219" cy="542" r="2" fill="#b99a52"/>
+  <text x="246" y="548" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#cbb47f">CONTRATACIÓN PÚBLICA</text>
+  <circle cx="527" cy="542" r="2" fill="#b99a52"/>
+  <text x="554" y="548" font-family="Arial,sans-serif" font-size="15" letter-spacing="2" fill="#cbb47f">DISPUTE BOARDS</text>
+</svg>

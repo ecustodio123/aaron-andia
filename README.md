@@ -22,4 +22,10 @@ Hero: fotografía de balanza de justicia y mazo por Sora Shimazaki, Pexels: http
 ## Cloudflare Pages
 
 Comando de compilación: `npm run build`. Directorio de salida: `dist`.
-No requiere backend ni variables de entorno. Configurar URL absoluta de `og:image` al confirmar el dominio definitivo.
+No requiere backend ni variables de entorno. La URL provisional de los metadatos es `https://aaron-andia.pages.dev/`. Al confirmar el dominio definitivo, reemplazar ese origen en `index.html` (canonical, Open Graph y Twitter).
+
+## Vista previa al compartir
+
+Imagen social: `public/images/aaron-andia-social.png` (1200 × 630). Fuente editable: `design/social-card.svg`. Los metadatos están en el HTML inicial para que puedan leerlos los rastreadores sin ejecutar JavaScript.
+
+Los cambios aparecen en el enlace público después del despliegue. Algunas aplicaciones conservan en caché tarjetas anteriores.
