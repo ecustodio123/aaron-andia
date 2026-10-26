@@ -13,7 +13,7 @@ Validación: `npm run lint`, `npm run typecheck`, `npm run build`.
 Textos, navegación, especialidades, publicaciones y contactos: `src/site.ts`.
 Colores: variables en `src/index.css`.
 
-Confirmar las credenciales del subtítulo antes de publicar. Los CTA abren WhatsApp al +51 960 869 846 con un mensaje inicial editable en `src/site.ts`. No envían mensajes automáticamente. Las publicaciones aceptan hasta tres enlaces externos.
+Todos los CTA abren el cliente de correo con destino temporal `mail@mail.com`, asunto y mensaje inicial editables en `src/site.ts`. Las especialidades utilizan asuntos distintos. Reemplazar el correo temporal cuando se confirme el definitivo. No se envían mensajes automáticamente. Las publicaciones aceptan hasta tres enlaces externos.
 
 ## Imágenes
 
@@ -22,10 +22,16 @@ Hero: fotografía de balanza de justicia y mazo por Sora Shimazaki, Pexels: http
 ## Cloudflare Pages
 
 Comando de compilación: `npm run build`. Directorio de salida: `dist`.
-No requiere backend ni variables de entorno. La URL provisional de los metadatos es `https://aaron-andia.pages.dev/`. Al confirmar el dominio definitivo, reemplazar ese origen en `index.html` (canonical, Open Graph y Twitter).
+No requiere backend ni variables de entorno. Dominio canónico: `https://www.andiaespinoza.com/`. Metadatos y datos estructurados: `src/seo.ts`. Conectar el dominio y configurar las redirecciones de host en Cloudflare antes del lanzamiento.
 
 ## Vista previa al compartir
 
 Imagen social: `public/images/aaron-andia-social.png` (1200 × 630). Fuente editable: `design/social-card.svg`. Los metadatos están en el HTML inicial para que puedan leerlos los rastreadores sin ejecutar JavaScript.
 
 Los cambios aparecen en el enlace público después del despliegue. Algunas aplicaciones conservan en caché tarjetas anteriores.
+
+## SEO
+
+`npm run build` comprueba TypeScript, compila, prerenderiza toda la landing en HTML e inspecciona la salida SEO. `npm run check:seo` repite la revisión de `dist`. `npm run preview` permite comprobar la hidratación de React sobre el HTML generado.
+
+Palabras clave, validaciones y tareas pendientes de publicación: [docs/seo.md](docs/seo.md). El sitemap y robots están en `public/`; actualizar `lastmod` ante cambios reales del contenido. No requiere servidor React en producción.

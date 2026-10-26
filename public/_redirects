@@ -1,0 +1,2 @@
+# Domain-wide redirects (pages.dev and apex to www) require Cloudflare Bulk Redirects.
+/index.html / 301

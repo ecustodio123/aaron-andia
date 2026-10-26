@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import './fonts.css';
 @import 'tailwindcss';
 :root {
@@ -9,13 +9,12 @@
   --warm: #f7f6f2; --gold: #b99a52; --gold-dark: #80672e;
   --gray: #666; --muted: #aaa;
   --font-editorial: 'Newsreader Variable', 'Newsreader', Georgia, serif;
-  --font-brand: 'Cormorant Garamond', Georgia, serif;
   --serif: var(--font-editorial);
   --header-height: 72px; --section-space: 64px;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; }
+body { margin: 0; min-width: 0; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; border: 0; }
 a, button { -webkit-tap-highlight-color: transparent; }
