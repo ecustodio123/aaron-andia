@@ -13,7 +13,9 @@ Validación: `npm run lint`, `npm run typecheck`, `npm run build`.
 Textos, navegación, especialidades, publicaciones y contactos: `src/site.ts`.
 Colores: variables en `src/index.css`.
 
-Todos los CTA abren el cliente de correo con destino temporal `mail@mail.com`, asunto y mensaje inicial editables en `src/site.ts`. Las especialidades utilizan asuntos distintos. Reemplazar el correo temporal cuando se confirme el definitivo. No se envían mensajes automáticamente. Las publicaciones aceptan hasta tres enlaces externos.
+El correo temporal `mail@mail.com` se muestra únicamente como texto en Contacto y en el footer. No hay botones de consulta, enlaces mailto, selector de correo ni acciones de copia. Reemplazar la dirección en `src/site.ts` al confirmar la definitiva.
+
+Publicaciones contiene tres cards y PDFs **ficticios para maquetación**, identificados como muestras. Los archivos están en `public/publicaciones/`, con `X-Robots-Tag: noindex` en Cloudflare. Sustituir contenido, archivos y esta regla antes de publicar documentos reales. El script opcional `scripts/create-publication-samples.py` los regenera con ReportLab; no forma parte del build. No se incorporan como artículos reales en JSON-LD.
 
 ## Imágenes
 
