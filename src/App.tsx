@@ -4,6 +4,9 @@ import { AnimatedMetric } from './components/AnimatedMetric'
 import './App.css'
 
 function Arrow() { return <span className="arrow" aria-hidden="true">↗</span> }
+function DownloadIcon() {
+  return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" /></svg>
+}
 function Brand() {
   return <a className="brand" href="#inicio" aria-label="Aarón Andía, inicio"><img src="/brand/aaron-andia-logo-completo-transparente.svg" width="1064" height="750" alt="Aarón Andía, abogado y árbitro. Arbitraje, contratación pública y Dispute Boards" /></a>
 }
@@ -100,7 +103,7 @@ function About() {
   return <section id="sobre-mi" className="about light"><div className="container">
     <div className="profile-grid" data-reveal>
       <div className="profile-heading"><Label>01 / PERFIL</Label><h2 tabIndex={-1}>Aarón Andía</h2></div>
-      <div className="profile-portrait"><img src="/images/aaron-andia-retrato.webp" alt="Retrato de Aarón Andía" width="900" height="1374" loading="lazy" /><span className="portrait-caption">{site.subtitle}</span></div>
+      <div className="profile-portrait"><img src="/images/aaron-andia-retrato.webp" alt="Retrato de Aarón Andía" width="900" height="1374" loading="lazy" /><span className="portrait-caption">{site.subtitle}</span><div className="profile-downloads" role="group" aria-label="Documentos profesionales">{site.profile.documents.map(document => document.url ? <a key={document.label} className="profile-download" href={document.url} download><DownloadIcon /><span>Descargar {document.label}</span></a> : <button key={document.label} className="profile-download" type="button" disabled><DownloadIcon /><span>Descargar {document.label}<small>Próximamente</small></span></button>)}</div></div>
       <div className="profile-copy">{site.profile.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         <details className="profile-education"><summary>Formación y especialización <span className="education-toggle" aria-hidden="true" /></summary><ul>{site.profile.education.map(item => <li key={item}>{item}</li>)}</ul></details>
         <a className="text-link" href="#experiencia">Explorar experiencia destacada <Arrow /></a>

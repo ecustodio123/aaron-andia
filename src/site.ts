@@ -5,6 +5,10 @@ export const site = {
   hero: 'Resolución estratégica de controversias en proyectos públicos e infraestructura',
   approach: 'Un enfoque que integra el análisis jurídico, la estrategia contractual y la comprensión de los desafíos técnicos de cada proyecto.',
   profile: {
+    documents: [
+      { label: 'Brochure', url: '/documentos/brochure-institucional-2026.pdf' },
+      { label: 'CV', url: null as string | null }, // Activar cuando se reciba el archivo definitivo.
+    ],
     paragraphs: [
       'Especialista en resolver disputas complejas en contratación pública, infraestructura y comercio. Su práctica se centra en arbitrajes vinculados a contratación pública, infraestructura, comerciales e internacionales, con experiencia en proyectos de inversión como Obras por Impuestos y Asociaciones Público-Privadas.',
       'Formado en la UPC, donde obtuvo el título de abogado con mención Sobresaliente y el grado de Maestro en Contratación Pública, con mención Notable.',

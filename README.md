@@ -45,3 +45,7 @@ Palabras clave, validaciones y tareas pendientes de publicación: [docs/seo.md](
 `design/brand/referencia-original.jpeg` y `design/social-card.svg` son fuentes de edición y no se despliegan. Las capturas de revisiones y las versiones descartadas de imágenes/logos se retiraron. Recursos actuales de marca: [design/brand/README.md](design/brand/README.md).
 
 Auditoría de limpieza y resultados: [docs/auditoria-repositorio.md](docs/auditoria-repositorio.md). Los demás informes en `docs/` son registros de revisiones previas; sus métricas y observaciones describen la versión revisada en su momento.
+
+## Descargas del perfil
+
+Debajo del retrato se muestran Brochure y CV. El brochure original está en `public/documentos/brochure-institucional-2026.pdf` y se descarga sin modificaciones. El CV aparece deshabilitado como “Próximamente”. Cuando llegue, agregar el PDF a `public/documentos/` y completar la URL de CV en `site.profile.documents` dentro de `src/site.ts`; el botón se activará automáticamente.

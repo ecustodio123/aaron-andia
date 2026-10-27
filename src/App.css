@@ -166,6 +166,14 @@
 .profile-portrait { margin: 0; }
 .profile-portrait img { width: 100%; max-width: 360px; height: auto; aspect-ratio: 900 / 1374; object-fit: cover; }
 .portrait-caption { display: block; margin-top: 14px; color: var(--gold-dark); font-size: 11px; letter-spacing: .12em; }
+/* Profile downloads stay below the portrait at every breakpoint. */
+.profile-downloads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+.profile-download { display: flex; align-items: center; justify-content: center; gap: 8px; min-width: 0; min-height: 64px; padding: 12px; border: 1px solid var(--gold); background: var(--gold); color: var(--black); font-size: 13px; font-weight: 600; line-height: 1.4; text-align: left; }
+.profile-download > svg { flex-shrink: 0; }
+.profile-download > span { min-width: 0; }
+.profile-download small { display: block; margin-top: 3px; font-size: 11px; font-weight: 400; }
+.profile-download:disabled { border-color: #ded8c9; background: var(--warm); color: #777; cursor: default; }
+@media (hover: hover) { a.profile-download:hover { background: #d0b474; border-color: #d0b474; } }
 .profile-heading h2 { margin-top: 24px; }
 .profile-copy > p { color: var(--gray); font-size: 18px; width: 100%; max-width: none; margin-bottom: 20px; text-align: justify; text-align-last: left; -webkit-hyphens: auto; hyphens: auto; }
 .profile-copy > p:first-of-type { color: #363630; }
