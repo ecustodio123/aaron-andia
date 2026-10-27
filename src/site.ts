@@ -7,7 +7,7 @@ export const site = {
   profile: {
     documents: [
       { label: 'Brochure', url: '/documentos/brochure-institucional-2026.pdf' },
-      { label: 'CV', url: null as string | null }, // Activar cuando se reciba el archivo definitivo.
+      { label: 'CV', url: '/documentos/aaron-andia-espinoza-cv.pdf' },
     ],
     paragraphs: [
       'Especialista en resolver disputas complejas en contratación pública, infraestructura y comercio. Su práctica se centra en arbitrajes vinculados a contratación pública, infraestructura, comerciales e internacionales, con experiencia en proyectos de inversión como Obras por Impuestos y Asociaciones Público-Privadas.',

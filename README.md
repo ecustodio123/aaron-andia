@@ -48,7 +48,7 @@ Auditoría de limpieza y resultados: [docs/auditoria-repositorio.md](docs/audito
 
 ## Descargas del perfil
 
-Debajo del retrato se muestran Brochure y CV. El brochure original está en `public/documentos/brochure-institucional-2026.pdf` y se descarga sin modificaciones. El CV aparece deshabilitado como “Próximamente”. Cuando llegue, agregar el PDF a `public/documentos/` y completar la URL de CV en `site.profile.documents` dentro de `src/site.ts`; el botón se activará automáticamente.
+Debajo del retrato se muestran Brochure y CV. El brochure original está en `public/documentos/brochure-institucional-2026.pdf` y se descarga sin modificaciones. El CV original está en `public/documentos/aaron-andia-espinoza-cv.pdf` y su descarga está activa. Ambos documentos se configuran en `site.profile.documents`, dentro de `src/site.ts`.
 
 ## Kafka Publications
 
