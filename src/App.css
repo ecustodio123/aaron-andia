@@ -8,9 +8,7 @@
 .section-label { display: flex; align-items: center; gap: 16px; color: var(--gold-dark); }
 .dark .section-label { color: #cbb47f; }
 .arrow { flex-shrink: 0; font-size: 23px; font-weight: 400; line-height: 1; letter-spacing: 0; transition: transform 160ms ease-out; }
-.button { display: inline-flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 52px; padding: 17px 24px; background: var(--gold); color: var(--black); font-size: 13px; line-height: 1.5; letter-spacing: .075em; text-transform: uppercase; font-weight: 600; transition: background 160ms ease-out; }
-.button:focus-visible { background: #d0b474; outline-color: #d0b474; }
-.button:focus-visible .arrow, .text-link:focus-visible .arrow { transform: translateX(3px); }
+.text-link:focus-visible .arrow { transform: translateX(3px); }
 .text-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 44px; padding-block: 10px; color: var(--gold-dark); font-size: 13px; line-height: 1.5; letter-spacing: .035em; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
 .dark .text-link { color: #cbb47f; }
 /* Header remains stable while scrolling */
@@ -36,12 +34,10 @@
 .hero h1 { font-size: clamp(56px, calc(16px + 8.3333vw), 80px); font-weight: 400; line-height: 1.02; letter-spacing: -.02em; text-wrap: balance; max-width: 100%; }
 .hero-subtitle { color: #d2b56f; font-size: 12px; letter-spacing: .22em; margin-top: 18px; }
 .hero-description { color: #e4e4e1; font-size: 18px; line-height: 1.65; max-width: 56ch; margin-top: 32px; }
-.hero .button { margin-top: 32px; }
 .hero-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px 24px; align-items: center; padding-bottom: 24px; }
 .hero-bottom > span { color: #deddd9; font-size: 11px; line-height: 1.7; letter-spacing: .06em; max-width: 46ch; }
 .hero-bottom .text-link { color: #e3d3ae; text-transform: uppercase; letter-spacing: .08em; }
-/* Enfoque: a point of view, rather than a second service list */
-/* Service actions stay visible and identify the selected specialty */
+/* Practice areas */
 .section-heading { display: flex; justify-content: space-between; align-items: center; gap: 32px; margin: 28px 0 40px; }
 .section-aside { display: none; font-size: 14px; color: var(--muted); text-align: right; }
 .practice-grid { display: grid; border-top: 1px solid #30302a; }
@@ -50,7 +46,7 @@
 .roman { display: block; font-family: var(--serif); font-size: 48px; font-weight: 400; font-optical-sizing: auto; line-height: 1; color: #b99a52; margin-bottom: 20px; }
 .practice-title .gold-rule { width: 40px; margin: 20px 0; }
 .practice-item > p { color: var(--muted); font-size: 16px; }
-/* Infrastructure is decorative; its CTA stays accessible */
+/* Decorative infrastructure banner */
 .infrastructure { position: relative; background: var(--black); color: white; }
 .infrastructure-photo { position: relative; overflow: hidden; height: 240px; }
 .infrastructure-photo img { position: absolute; top: -70px; width: 190%; max-width: none; left: -45%; height: calc(100% + 100px); object-fit: cover; }
@@ -92,8 +88,7 @@
 .footer-bottom { border-top: 1px solid #292925; margin-top: 40px; padding-top: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .footer-bottom a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding-block: 10px; font-size: 14px; }
 @media (hover: hover) {
-  .button:hover { background: #d0b474; }
-  .button:hover .arrow, .text-link:hover .arrow { transform: translateX(3px); }
+  .text-link:hover .arrow { transform: translateX(3px); }
   .navigation a:hover::after { transform: scaleX(1); }
   .text-link:hover, .footer a:hover { text-decoration: underline; text-underline-offset: 5px; }
 }
@@ -145,7 +140,6 @@
 }
 @media (max-width: 479px) {
   .hero h1 { max-width: 8ch; font-size: 56px; }
-  .hero .button, .contact .button, .infrastructure .button { width: 100%; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
   .hero-bottom > span { max-width: 32ch; }
   .contact-monogram { width: 400px; }
@@ -156,7 +150,7 @@
 
 .navigation a, .footer nav a { min-width: 44px; }
 /* Newsreader scale: optical sizes follow the actual rendered type size. */
-.roman, .infrastructure-caption p, .coming-soon, .contact-monogram { font-optical-sizing: auto; }
+.roman, .infrastructure-caption p, .contact-monogram { font-optical-sizing: auto; }
 @media (min-width: 768px) {
   .hero h1 { font-size: clamp(80px, calc(44px + 4.6875vw), 104px); }
 }
@@ -168,7 +162,6 @@
 .brand img { display: block; width: auto; height: 160px; object-fit: contain; }
 .footer .brand { width: min(340px, 100%); }
 .footer .brand img { height: auto; width: 100%; filter: brightness(0) invert(1); }
-@media (min-width: 1200px) { .header .brand img { height: 160px; } }
 
 /* Profile and experience — content supplied in the institutional brochure. */
 .profile-grid { display: grid; gap: 32px; align-items: start; }
@@ -211,7 +204,6 @@
 .case-role { font-size: 13px; line-height: 1.6; max-width: 24ch; color: #515147; }
 .experience-case h3 { margin-bottom: 18px; }
 .experience-case > div:last-child > p { color: var(--gray); font-size: 16px; }
-.experience > .container > .text-link { margin-top: 16px; }
 @media (min-width: 768px) {
   .profile-grid { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 40px; }
   .profile-heading { grid-column: 2; grid-row: 1; }
@@ -277,7 +269,7 @@
 /* Responsive refinement: narrow phones, touch navigation and tablet landscape. */
 .profile-grid > *, .profile-approach > *, .publication-cards > *,
 .contact-grid > *, .footer-grid > * { min-width: 0; }
-.button, .text-link { max-width: 100%; }
+.text-link { max-width: 100%; }
 .navigation { overscroll-behavior: contain; }
 @media (max-width: 1199px) {
   .navigation a { width: 100%; }
@@ -287,13 +279,11 @@
   .profile-portrait { width: min(100%, 280px); margin-inline: auto; }
   .profile-portrait img { max-width: none; }
   .portrait-caption { text-align: center; }
-  .footer .brand img { width: 100%; }
   .footer nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 16px; align-items: stretch; }
   .footer nav a { width: 100%; }
 }
 @media (max-width: 359px) {
   .hero h1 { font-size: 52px; }
-  .button { padding-inline: 18px; gap: 16px; letter-spacing: .04em; }
   .practice-item { padding-inline: 16px; }
   .text-link { gap: 12px; }
 }
@@ -305,7 +295,6 @@
   .hero-content > .gold-rule { margin-bottom: 12px; }
   .hero-eyebrow { margin-bottom: 16px; }
   .hero-description { margin-top: 20px; }
-  .hero .button { margin-top: 24px; }
   .hero-bottom { padding-bottom: 16px; }
 }
 

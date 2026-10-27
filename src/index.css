@@ -5,7 +5,7 @@
   font-family: 'Inter', sans-serif;
   color: var(--black); background: var(--white); font-synthesis: none;
   text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;
-  --black: #0b0b0b; --black-secondary: #171717; --white: #fff;
+  --black: #0b0b0b; --white: #fff;
   --warm: #f7f6f2; --gold: #b99a52; --gold-dark: #80672e;
   --gray: #666; --muted: #aaa;
   --font-editorial: 'Newsreader Variable', 'Newsreader', Georgia, serif;
@@ -32,7 +32,7 @@ section[id], main[id] { scroll-margin-top: calc(var(--header-height) + 16px); }
 .skip-link:focus { top: 15px; }
 [hidden] { display: none !important; }
 @media (min-width: 768px) { :root { --section-space: 80px; } h2 { font-size: 44px; } h3 { font-size: 30px; } }
-@media (min-width: 1200px) { :root { --header-height: 176px; --section-space: 96px; } h2 { font-size: 56px; } h3 { font-size: 34px; } }
+@media (min-width: 1200px) { :root { --section-space: 96px; } h2 { font-size: 56px; } h3 { font-size: 34px; } }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }

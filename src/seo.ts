@@ -34,7 +34,7 @@ export const structuredData = {
       '@type': 'Person', '@id': personId,
       name: site.name, url: seo.url, jobTitle: 'Abogado y árbitro',
       description: site.profile.paragraphs[0],
-      image: new URL('images/aaron-andia-retrato.jpg', seo.url).href,
+      image: new URL('images/aaron-andia-retrato.webp', seo.url).href,
       sameAs: [site.contact.linkedin],
       knowsAbout: ['Arbitraje', 'Contratación pública', 'Dispute Boards', 'Derecho de la construcción', 'Obras por Impuestos', 'Asociaciones Público-Privadas'],
       alumniOf: { '@type': 'CollegeOrUniversity', name: 'UPC' },

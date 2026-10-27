@@ -1,5 +1,8 @@
 # Interactividad de experiencia y contacto
 
+> Registro histórico de la versión revisada. Para el estado actual y la limpieza de recursos, consultar `README.md` y `docs/auditoria-repositorio.md`.
+
+
 ## Cambios
 
 - Contadores +80, +9 y +7: animación lineal de 1.6 segundos mediante requestAnimationFrame al entrar en pantalla. Cada contador se ejecuta una vez por montaje; volver a la sección no lo reinicia.

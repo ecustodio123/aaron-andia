@@ -107,7 +107,7 @@ function About() {
         <a className="text-link" href="#experiencia">Explorar experiencia destacada <Arrow /></a>
       </div>
     </div>
-    <div className="profile-approach" data-reveal><div><h3>Estrategia jurídica.<br /><em>Visión de proyecto.</em></h3><p>{site.about[1]}</p></div><ol className="profile-pillars">{site.pillars.map((title, i) => <li key={title}><span aria-hidden="true">0{i + 1}</span><span>{title}</span></li>)}</ol></div>
+    <div className="profile-approach" data-reveal><div><h3>Estrategia jurídica.<br /><em>Visión de proyecto.</em></h3><p>{site.approach}</p></div><ol className="profile-pillars">{site.pillars.map((title, i) => <li key={title}><span aria-hidden="true">0{i + 1}</span><span>{title}</span></li>)}</ol></div>
   </div></section>
 }
 function Experience() {

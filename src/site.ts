@@ -3,7 +3,7 @@ export const site = {
   contact: { email: 'aaron@andiaespinoza.com', linkedin: 'https://www.linkedin.com/in/aaron-andia-espinoza/' }, // Correo temporal: reemplazar al confirmar el definitivo.
   location: 'Lima, Perú', // Ciudad indicada en el brochure institucional 2026.
   hero: 'Resolución estratégica de controversias en proyectos públicos e infraestructura',
-  about: ['Consultoría especializada en la prevención y resolución de controversias vinculadas a la contratación pública y a los proyectos de infraestructura.', 'Un enfoque que integra el análisis jurídico, la estrategia contractual y la comprensión de los desafíos técnicos de cada proyecto.'],
+  approach: 'Un enfoque que integra el análisis jurídico, la estrategia contractual y la comprensión de los desafíos técnicos de cada proyecto.',
   profile: {
     paragraphs: [
       'Especialista en resolver disputas complejas en contratación pública, infraestructura y comercio. Su práctica se centra en arbitrajes vinculados a contratación pública, infraestructura, comerciales e internacionales, con experiencia en proyectos de inversión como Obras por Impuestos y Asociaciones Público-Privadas.',

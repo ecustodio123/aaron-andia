@@ -1,5 +1,8 @@
 # Incorporación del brochure institucional 2026
 
+> Registro histórico de la versión revisada. Para el estado actual y la limpieza de recursos, consultar `README.md` y `docs/auditoria-repositorio.md`.
+
+
 Fuente local proporcionada por el cliente: `/Users/enriquecustodio/Downloads/Brochure institucional 2026.pdf`.
 
 ## Alcance

@@ -1,5 +1,8 @@
 # Newsreader + Inter — revisión local
 
+> Registro histórico de la versión revisada. Para el estado actual y la limpieza de recursos, consultar `README.md` y `docs/auditoria-repositorio.md`.
+
+
 Cambio limitado a tipografía. Componentes, contenido, imágenes, colores, navegación y funcionalidad no se modificaron.
 
 ## Carga

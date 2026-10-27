@@ -27,11 +27,11 @@ Las palabras clave se integran de forma natural. No se añadió `meta keywords`:
 - Idioma `es-PE`, un único H1, secciones y enlaces internos descriptivos, imágenes informativas con alt, decorativas con alt vacío.
 - JSON-LD: WebSite, WebPage, Person y tres Service conectados mediante identificadores. Incluye LinkedIn confirmado, formación UPC y Lima, Perú. No incluye correo temporal, teléfono, dirección postal, reseñas ni datos inventados. No se presenta como una ficha LocalBusiness sin información de oficina validada.
 - La compilación genera contenido completo dentro de `dist/index.html` mediante React server rendering. El navegador hidrata ese HTML y conserva menús, contadores y desplegables. El contenido sigue disponible sin JavaScript. [Google recomienda considerar prerenderizado y recuerda que otros robots pueden no ejecutar JavaScript](https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics).
-- Fotos usadas en WebP: hero 171 KB, retrato 67 KB, banner 56 KB; dimensiones reservadas, hero prioritario y fotos inferiores con carga diferida. Originales conservados. Las tres fotos pasan de 1.272.635 a 293.732 bytes: 76,9 % menos de peso.
+- Fotos usadas en WebP: hero 171 KB, retrato 67 KB, banner 56 KB; dimensiones reservadas, hero prioritario y fotos inferiores con carga diferida. Las copias JPG/PNG sustituidas se retiraron en la limpieza del repositorio; el retrato del JSON-LD apunta al WebP activo. Las tres fotos pasan de 1.272.635 a 293.732 bytes: 76,9 % menos de peso.
 - `robots.txt` permite rastreo y anuncia sitemap. `sitemap.xml` contiene solo la URL canónica real, sin fragmentos ni páginas inexistentes. Actualizar `lastmod` cuando cambie materialmente el contenido, no en cada compilación. [Guía de Google para sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).
 - `404.html` evita el fallback SPA de Cloudflare en rutas inexistentes y usa noindex; no se crean rutas para cada ancla. [Comportamiento de Cloudflare Pages](https://developers.cloudflare.com/pages/configuration/serving-pages/).
 - `_headers` permite caché prolongada exclusivamente de assets con hash. `_redirects` normaliza `/index.html` a `/`.
-- El correo sigue siendo `aaron@andiaespinoza.com` por instrucción del cliente. Su texto visible está marcado `data-nosnippet` para evitar que Google lo use en fragmentos; no se incluye en JSON-LD. Debe reemplazarse por el correo confirmado antes del lanzamiento.
+- El correo sigue siendo `aaron@andiaespinoza.com` por instrucción del cliente. Su texto visible está marcado `data-nosnippet` para evitar que Google lo use en fragmentos; no se incluye en JSON-LD. La dirección se mantiene centralizada en `src/site.ts` y se muestra como texto, sin enlaces de correo.
 
 ## Validación reproducible
 
@@ -58,7 +58,7 @@ El modo `dev` genera los metadatos pero monta React en cliente; para comprobar e
 
 Al revisar el dominio oficial, la respuesta pública HTTP 200 contenía únicamente un script que redirigía a `/lander`; todavía no mostraba esta landing. La versión pública provisional seguía en `aaron-andia.pages.dev`. Ninguna de estas configuraciones externas fue modificada.
 
-1. Confirmar correo profesional y sustituir el temporal en `src/site.ts`.
+1. Confirmar que el correo configurado en `src/site.ts` sea el definitivo.
 2. Conectar `www.andiaespinoza.com` como Custom Domain del proyecto Cloudflare Pages y validar DNS/HTTPS. Publicar `dist`, con `npm run build` como comando.
 3. Configurar redirección permanente del dominio sin www y de `aaron-andia.pages.dev` al dominio canónico con www, preservando ruta y query y evitando bucles. Esto requiere reglas de dominio/Bulk Redirects en Cloudflare: los redirects por host no se resuelven en `_redirects`. [Guía oficial para redirigir pages.dev al dominio propio](https://developers.cloudflare.com/pages/how-to/redirect-to-custom-domain/) y [límites de `_redirects`](https://developers.cloudflare.com/pages/configuration/redirects/).
 4. Comprobar respuesta 200 del inicio, URLs de imágenes y archivos SEO; una ruta inventada debe devolver 404 real. Comprobar que ninguna regla de hosting añada `noindex` al dominio principal. Las previews de despliegue deben mantenerse fuera del índice con la configuración del hosting.

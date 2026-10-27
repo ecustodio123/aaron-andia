@@ -52,11 +52,29 @@ check('Datos estructurados coherentes', () => {
   assert.ok(!json.includes('aaron@andiaespinoza.com'))
   assert.ok(!json.includes('aggregateRating'))
 })
-for (const match of html.matchAll(/(?:src|href)="(\/(?:assets|images|brand)\/[^"?#]+)[^" ]*"/g)) await access(`dist${match[1]}`)
-await access('dist/images/aaron-andia-social.png')
 const robots = await readFile('dist/robots.txt', 'utf8')
 const sitemap = await readFile('dist/sitemap.xml', 'utf8')
 const notFound = await readFile('dist/404.html', 'utf8')
+// Validate files linked by the page, social metadata, JSON-LD and the error page.
+// Vite copies public/ verbatim; stale references can otherwise survive a successful build.
+const localFiles = new Set()
+function collectUrl(value) {
+  if (!value.startsWith('/') && !value.startsWith(origin)) return
+  if (value.startsWith('//')) return
+  const url = new URL(value.replaceAll('&amp;', '&'), origin)
+  if (url.origin !== new URL(origin).origin) return
+  localFiles.add(url.pathname === '/' ? 'dist/index.html' : `dist${decodeURIComponent(url.pathname)}`)
+}
+for (const document of [html, notFound]) {
+  for (const match of document.matchAll(/(?:src|href|content)="([^"<>]+)"/g)) collectUrl(match[1])
+}
+function collectStructuredUrls(value) {
+  if (typeof value === 'string') collectUrl(value)
+  else if (value && typeof value === 'object') Object.values(value).forEach(collectStructuredUrls)
+}
+collectStructuredUrls(JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]))
+for (const path of localFiles) await access(path)
+console.log(`Recursos locales: ${localFiles.size} destinos válidos (incluye PDFs y retrato SEO).`)
 check('Rastreo, sitemap y página 404', () => {
   assert.match(robots, /Allow: \//)
   assert.ok(robots.includes(`Sitemap: ${origin}sitemap.xml`))

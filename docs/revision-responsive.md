@@ -1,5 +1,8 @@
 # Revisión responsive completa — 26/10/2026
 
+> Registro histórico de la versión revisada. Para el estado actual y la limpieza de recursos, consultar `README.md` y `docs/auditoria-repositorio.md`.
+
+
 ## Alcance y método
 
 Se revisaron Inicio, Quién soy, Áreas, Experiencia, banda de infraestructura, Publicaciones, Contacto y Footer en 12 viewports CSS. Cada viewport se creó con la misma landing dentro de un iframe temporal del tamaño indicado, medido desde su DOM. Se capturaron las ocho zonas antes y después y se inspeccionaron composiciones representativas de teléfono, iPad vertical/horizontal y laptop. No se instaló ninguna herramienta ni librería nueva.

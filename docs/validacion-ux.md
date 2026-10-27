@@ -1,5 +1,8 @@
 # Revisión local de narrativa y legibilidad — 24/10/2026
 
+> Registro histórico de la versión revisada. Para el estado actual y la limpieza de recursos, consultar `README.md` y `docs/auditoria-repositorio.md`.
+
+
 ## Cambios
 
 - Enfoque sustituye el rótulo Sobre mí conservando `#sobre-mi`; título editorial, textos profesionales existentes y tres pilares derivados de la oración original.
