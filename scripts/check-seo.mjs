@@ -67,6 +67,9 @@ function collectUrl(value) {
 }
 for (const document of [html, notFound]) {
   for (const match of document.matchAll(/(?:src|href|content)="([^"<>]+)"/g)) collectUrl(match[1])
+  for (const match of document.matchAll(/(?:srcset|imagesrcset)="([^"<>]+)"/gi)) {
+    for (const candidate of match[1].split(',')) collectUrl(candidate.trim().split(/\s+/)[0])
+  }
 }
 function collectStructuredUrls(value) {
   if (typeof value === 'string') collectUrl(value)

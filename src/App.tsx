@@ -91,16 +91,15 @@ function Header() {
 }
 function Hero() {
   return <section id="inicio" className="hero">
-    <img className="hero-image" src="/images/legal-desk.webp" alt="" fetchPriority="high" width="2200" height="1467" />
+    <img className="hero-image" src="/images/hero-obra-1280.webp" srcSet="/images/hero-obra-640.webp 640w, /images/hero-obra-960.webp 960w, /images/hero-obra-1280.webp 1280w" sizes="100vw" alt="" fetchPriority="high" width="1280" height="960" />
     <div className="hero-shade" />
-    <div className="container hero-content"><span className="gold-rule" aria-hidden="true" /><p className="eyebrow hero-eyebrow">Abogado y árbitro en Perú</p><h1 tabIndex={-1}>AARÓN ANDÍA</h1><p className="hero-subtitle">{site.subtitle}</p><p className="hero-description">{site.hero}</p></div>
-    <div className="container hero-bottom"><span>ARBITRAJE · CONTRATACIÓN PÚBLICA · DISPUTE BOARDS</span><a className="text-link" href="#sobre-mi">Explorar <span aria-hidden="true">↓</span></a></div>
+    <div className="container hero-content"><span className="gold-rule" aria-hidden="true" /><h1 tabIndex={-1}>AARÓN ANDÍA</h1><p className="hero-subtitle">{site.subtitle}</p><p className="hero-description">{site.hero}</p></div>
   </section>
 }
 function About() {
   return <section id="sobre-mi" className="about light"><div className="container">
     <div className="profile-grid" data-reveal>
-      <div className="profile-heading"><Label>01 / QUIÉN SOY</Label><h2 tabIndex={-1}>Aarón Andía</h2></div>
+      <div className="profile-heading"><Label>01 / PERFIL</Label><h2 tabIndex={-1}>Aarón Andía</h2></div>
       <div className="profile-portrait"><img src="/images/aaron-andia-retrato.webp" alt="Retrato de Aarón Andía" width="900" height="1374" loading="lazy" /><span className="portrait-caption">{site.subtitle}</span></div>
       <div className="profile-copy">{site.profile.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
         <details className="profile-education"><summary>Formación y especialización <span className="education-toggle" aria-hidden="true" /></summary><ul>{site.profile.education.map(item => <li key={item}>{item}</li>)}</ul></details>
@@ -118,12 +117,12 @@ function Experience() {
   </div></section>
 }
 function PracticeAreas() {
-  return <section id="areas-de-practica" className="practice dark"><div className="container" data-reveal><Label>02 / ESPECIALIDADES</Label><div className="section-heading"><h2 tabIndex={-1}>Áreas de práctica</h2><p className="section-aside">Rigor jurídico.<br />Perspectiva estratégica.</p></div>
+  return <section id="areas-de-practica" className="practice dark"><div className="container" data-reveal><Label>02 / ESPECIALIDADES</Label><div className="section-heading"><h2 tabIndex={-1}>Áreas de práctica</h2><p className="section-aside">Estrategía jurídica.<br />Visión de proyecto.</p></div>
     <div className="practice-grid">{site.practices.map(item => <article key={item.number} className="practice-item"><div className="practice-title"><span className="roman" aria-hidden="true">{item.number}</span><h3>{item.title}</h3><span className="gold-rule" aria-hidden="true" /></div><p>{item.description}</p></article>)}</div>
   </div></section>
 }
 function InfrastructureBanner() {
-  return <aside className="infrastructure" aria-label="Proyectos de infraestructura"><div className="infrastructure-photo"><img src="/images/infrastructure-reference.webp" loading="lazy" alt="" width="1349" height="441" /></div><div className="container infrastructure-caption"><p>Visión jurídica para<br /><em>proyectos que trascienden.</em></p></div></aside>
+  return <aside className="infrastructure" aria-label="Proyectos de infraestructura"><div className="infrastructure-photo"><img src="/images/vision-juridica-1280.webp" srcSet="/images/vision-juridica-640.webp 640w, /images/vision-juridica-960.webp 960w, /images/vision-juridica-1280.webp 1280w" sizes="100vw" loading="lazy" alt="" width="1280" height="960" /></div><div className="container infrastructure-caption"><p>Visión jurídica para<br /><em>proyectos que trascienden.</em></p></div></aside>
 }
 function Publications() {
   return <section id="publicaciones" className="publications light"><div className="container" data-reveal>
@@ -140,7 +139,7 @@ function Contact() {
 }
 const currentYear = new Date().getFullYear()
 function Footer() {
-  return <footer className="footer dark"><div className="container"><div className="footer-grid"><div className="footer-brand"><Brand /><p>Especialización en arbitraje, contratación pública y resolución de controversias en proyectos de infraestructura en Perú.</p>{site.contact.linkedin && <a className="footer-linkedin" href={site.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Perfil de Aarón Andía en LinkedIn (abre en otra pestaña)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg><span>LinkedIn</span><Arrow /></a>}</div><div className="footer-navigation"><h2 className="eyebrow">Navegación</h2><nav aria-label="Navegación del pie de página">{navigation.map(item => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}</nav></div><div className="footer-contact"><h2 className="eyebrow">Contacto</h2><p className="footer-email" data-nosnippet>{site.contact.email}</p></div></div><div className="footer-bottom"><span>© {currentYear} {site.name}. Todos los derechos reservados.</span><a href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a></div></div></footer>
+  return <footer className="footer dark"><div className="container"><div className="footer-grid"><div className="footer-brand"><Brand /><p>Especialización en arbitraje, contratación pública y resolución de controversias en proyectos de infraestructura en Perú.</p>{site.contact.linkedin && <a className="footer-linkedin" href={site.contact.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Perfil de Aarón Andía en LinkedIn (abre en otra pestaña)"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="2" /><g fill="var(--black)"><circle cx="6.3" cy="6.3" r="1.7" /><path d="M4.8 9h3v10.2h-3zM10 9h2.9v1.4c.5-1 1.5-1.7 3-1.7 3.1 0 3.7 2 3.7 4.6v5.9h-3v-5.3c0-1.3 0-2.8-1.7-2.8s-1.9 1.3-1.9 2.7v5.4h-3z" /></g></svg><span>LinkedIn</span><Arrow /></a>}</div><div className="footer-navigation"><h2 className="eyebrow">Navegación</h2><nav aria-label="Navegación del pie de página">{navigation.map(item => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}</nav></div><div className="footer-contact"><h2 className="eyebrow">Contacto</h2><p className="footer-email" data-nosnippet>{site.contact.email}</p></div></div><div className="footer-bottom"><span>© {currentYear} {site.name}. Todos los derechos reservados.</span><a href="#inicio">Volver al inicio <span aria-hidden="true">↑</span></a></div></div></footer>
 }
 export default function App() {
   const main = useRef<HTMLElement>(null)

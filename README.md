@@ -19,7 +19,7 @@ Publicaciones contiene tres cards y PDFs **ficticios para maquetación**, identi
 
 ## Imágenes
 
-Hero: fotografía de balanza de justicia y mazo por Sora Shimazaki, Pexels: https://www.pexels.com/photo/judges-desk-with-gavel-and-scales-5669619/. Banner: imagen del documento de referencia, con encuadre que oculta la etiqueta de captura. No se presentan como proyectos del profesional.
+Hero: fotografía de obra proporcionada por el cliente el 26/10/2026, optimizada en WebP a 640, 960 y 1280 px de ancho, con `srcset` responsive y encuadre CSS. Banner “Visión jurídica”: segunda fotografía de obra proporcionada por el cliente, con versiones WebP de 640, 960 y 1280 px y encuadre responsive centrado en el equipo. No se presentan como proyectos del profesional.
 
 ## Cloudflare Pages
 

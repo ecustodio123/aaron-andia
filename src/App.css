@@ -26,7 +26,7 @@
 .navigation a[aria-current]::after, .navigation a:focus-visible::after { transform: scaleX(1); }
 /* Hero flows naturally at narrow widths and short viewport heights */
 .hero { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: center; color: white; background: #343b3f; }
-.hero-image, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; object-fit: cover; object-position: 58% center; }
+.hero-image, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; object-fit: cover; object-position: 55% 62%; }
 .hero-shade { z-index: -1; background: linear-gradient(90deg, #090f11ed, #090f1166), linear-gradient(0deg, #0008, transparent 65%); }
 .hero-content { padding-block: 56px 40px; animation: hero-in 400ms cubic-bezier(.22,1,.36,1); }
 .hero-content > .gold-rule { margin-bottom: 24px; }
@@ -48,8 +48,8 @@
 .practice-item > p { color: var(--muted); font-size: 16px; }
 /* Decorative infrastructure banner */
 .infrastructure { position: relative; background: var(--black); color: white; }
-.infrastructure-photo { position: relative; overflow: hidden; height: 240px; }
-.infrastructure-photo img { position: absolute; top: -70px; width: 190%; max-width: none; left: -45%; height: calc(100% + 100px); object-fit: cover; }
+.infrastructure-photo { position: relative; overflow: hidden; height: 300px; }
+.infrastructure-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 75%; }
 .infrastructure-photo::after { content: ''; position: absolute; inset: 0; background: #0002; }
 .infrastructure-caption { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; padding-block: 28px 32px; }
 .infrastructure-caption p { font-family: var(--serif); font-size: 30px; line-height: 1.15; }
@@ -96,14 +96,13 @@
 @media (min-width: 768px) {
   .container, .header-inner { width: min(1280px, calc(100% - 64px)); }
   .hero-content { padding-block: 72px 56px; }
-  .hero-image { object-position: center 55%; }
+  .hero-image { object-position: center 65%; }
   .hero-subtitle { font-size: 14px; letter-spacing: .28em; }
   .hero-description { max-width: 50ch; }
   .section-aside { display: block; }
   .practice-item { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); column-gap: 40px; padding: 32px; }
   .practice-item > p { grid-column: 2; }
   .infrastructure-photo { height: 320px; }
-  .infrastructure-photo img { width: 125%; left: -12.5%; }
   .infrastructure-photo::after { background: linear-gradient(0deg, #000e, #0002); }
   .infrastructure-caption { position: absolute; bottom: 0; left: 0; right: 0; padding-bottom: 32px; }
   .infrastructure-caption p { font-size: 36px; }
@@ -128,7 +127,6 @@
   .practice-title h3 { min-height: 80px; display: flex; align-items: center; }
   .roman { font-size: 58px; margin-bottom: 24px; }
   .infrastructure-photo { height: 360px; }
-  .infrastructure-photo img { width: 100%; left: 0; height: calc(100% + 110px); }
   .infrastructure-caption { flex-direction: row; align-items: center; justify-content: space-between; gap: 40px; padding-bottom: 40px; }
   .infrastructure-caption p { font-size: 42px; }
   .contact-grid { grid-template-columns: 7fr 4fr; column-gap: 8.333%; row-gap: 32px; margin-top: 40px; }
