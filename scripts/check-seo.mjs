@@ -27,7 +27,7 @@ check('Dominio y metadatos', () => {
 })
 check('Contenido prerenderizado y accesible', () => {
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1)
-  for (const id of ['inicio', 'sobre-mi', 'areas-de-practica', 'experiencia', 'publicaciones', 'contacto']) assert.ok(html.includes(`id="${id}"`), id)
+  for (const id of ['inicio', 'sobre-mi', 'areas-de-practica', 'experiencia', 'contacto']) assert.ok(html.includes(`id="${id}"`), id)
   for (const phrase of ['AARÓN ANDÍA', 'Arbitraje', 'Contratación pública', 'Dispute Boards', 'Lima, Perú', 'Formación']) assert.ok(html.includes(phrase), phrase)
   assert.ok(html.includes('<details'))
   for (const img of html.matchAll(/<img\b[^>]*>/g)) assert.match(img[0], /\balt="[^"]*"/)

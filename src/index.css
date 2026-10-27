@@ -10,7 +10,7 @@
   --gray: #666; --muted: #aaa;
   --font-editorial: 'Newsreader Variable', 'Newsreader', Georgia, serif;
   --serif: var(--font-editorial);
-  --header-height: 176px; --section-space: 64px;
+  --header-height: 88px; --section-space: 64px;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }

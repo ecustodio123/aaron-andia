@@ -15,7 +15,7 @@ Colores: variables en `src/index.css`.
 
 El correo configurado en `src/site.ts` se muestra únicamente como texto en Contacto y en el footer. No hay botones de consulta, enlaces mailto, selector de correo ni acciones de copia.
 
-Publicaciones consulta metadata real de Kafka Publications en Supabase, sin sesión administrativa y bajo RLS. Usa la tienda explícita de la configuración; no incluye publicaciones ficticias. Los documentos se descargan mediante una Pages Function que valida la autorización antes de firmar el PDF privado. Integración, variables, pruebas e infraestructura pendiente: [docs/publicaciones-supabase.md](docs/publicaciones-supabase.md).
+La sección Publicaciones está temporalmente oculta en la landing; su componente e integración se conservan para reactivarla. Cuando está visible, consulta metadata real de Kafka Publications en Supabase, sin sesión administrativa y bajo RLS. Usa la tienda explícita de la configuración; no incluye publicaciones ficticias. Los documentos se descargan mediante una Pages Function que valida la autorización antes de firmar el PDF privado. Integración, variables, pruebas e infraestructura pendiente: [docs/publicaciones-supabase.md](docs/publicaciones-supabase.md).
 
 ## Imágenes
 

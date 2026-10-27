@@ -7,8 +7,6 @@
 .eyebrow, .section-label { font-family: Inter, sans-serif; font-size: 11px; line-height: 1.6; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
 .section-label { display: flex; align-items: center; gap: 16px; color: var(--gold-dark); }
 .dark .section-label { color: #cbb47f; }
-.arrow { flex-shrink: 0; font-size: 23px; font-weight: 400; line-height: 1; letter-spacing: 0; transition: transform 160ms ease-out; }
-.text-link:focus-visible .arrow { transform: translateX(3px); }
 .text-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 44px; padding-block: 10px; color: var(--gold-dark); font-size: 13px; line-height: 1.5; letter-spacing: .035em; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
 .dark .text-link { color: #cbb47f; }
 /* Header remains stable while scrolling */
@@ -68,13 +66,13 @@
 @media (min-width: 700px) { .publication-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1100px) { .publication-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* Contact information remains plain, selectable text. */
-.contact { position: relative; overflow: hidden; }
+.contact { position: relative; overflow: hidden; color: var(--black); }
 .contact > .container { position: relative; z-index: 1; }
 .contact-grid { display: grid; gap: 32px; margin-top: 32px; }
-.contact h2 em { color: #cbb47f; font-weight: 400; }
-.contact-intro > p { color: var(--muted); margin-top: 24px; }
-.contact-email { display: flex; align-items: center; width: fit-content; min-height: 44px; margin-top: 8px; padding-block: 10px; color: #cbb47f; font-size: 14px; }
-.contact-monogram { width: 540px; height: auto; position: absolute; right: -30px; bottom: -80px; opacity: .025; filter: brightness(0) invert(1); pointer-events: none; }
+.contact h2 em { color: var(--gold-dark); font-weight: 400; }
+.contact-intro > p { color: var(--gray); margin-top: 24px; }
+.contact-email { display: flex; align-items: center; width: fit-content; min-height: 44px; margin-top: 8px; padding-block: 10px; color: var(--gold-dark); font-size: 14px; }
+.contact-monogram { width: 540px; height: auto; position: absolute; right: -30px; bottom: -80px; opacity: .035; pointer-events: none; }
 /* Footer: identity, contact, navigation on mobile */
 .footer { border-top: 1px solid #8e743c; padding: 48px 0 24px; }
 .footer-grid { display: grid; gap: 32px; }
@@ -87,12 +85,12 @@
 .footer-bottom { border-top: 1px solid #292925; margin-top: 40px; padding-top: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .footer-bottom a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding-block: 10px; font-size: 14px; }
 @media (hover: hover) {
-  .text-link:hover .arrow { transform: translateX(3px); }
   .navigation a:hover::after { transform: scaleX(1); }
   .text-link:hover, .footer a:hover { text-decoration: underline; text-underline-offset: 5px; }
 }
 @media (min-width: 480px) { .container, .header-inner { width: min(1280px, calc(100% - 48px)); } }
 @media (min-width: 768px) {
+  :root { --header-height: 104px; }
   .container, .header-inner { width: min(1280px, calc(100% - 64px)); }
   .hero-content { padding-block: 72px 56px; }
   .hero-image { object-position: center 65%; }
@@ -155,8 +153,8 @@
   .hero h1 { font-size: clamp(104px, calc(72px + 2.5vw), 120px); }
 }
 
-/* Official AA + name lockup, without the gold rule or service descriptors. */
-.brand img { display: block; width: auto; height: 160px; object-fit: contain; }
+/* Compact header with the official AA, name and gold rule lockup. */
+.brand img { display: block; width: auto; height: calc(var(--header-height) - 24px); object-fit: contain; }
 .footer .brand { width: min(340px, 100%); }
 .footer .brand img { height: auto; width: 100%; filter: brightness(0) invert(1); }
 
@@ -268,8 +266,6 @@
 
 .footer-linkedin { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 20px; padding-block: 10px; color: #cbb47f; font-size: 14px; line-height: 1.6; }
 .footer-linkedin > svg { flex-shrink: 0; }
-.footer-linkedin:focus-visible .arrow { transform: translateX(3px); }
-@media (hover: hover) { .footer-linkedin:hover .arrow { transform: translateX(3px); } }
 
 /* Responsive refinement: narrow phones, touch navigation and tablet landscape. */
 .profile-grid > *, .profile-approach > *, .publication-cards > *,
@@ -303,15 +299,15 @@
   .hero-bottom { padding-bottom: 16px; }
 }
 
-.contact-location { margin-top: 12px; font-size: 14px; color: var(--muted); }
+.contact-location { margin-top: 12px; font-size: 14px; color: var(--gray); }
 /* Desktop navigation is usable even before hydration removes the mobile hidden state. */
 @media (min-width: 1200px) { #main-navigation[hidden] { display: flex !important; } }
 
 
 .footer nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; color: var(--muted); padding-block: 10px; }
 .footer-email { font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
-.contact-details { align-self: center; border-top: 1px solid #514730; padding-top: 24px; }
-.contact-details .eyebrow { color: #cbb47f; }
+.contact-details { align-self: center; border-top: 1px solid #ded8c9; padding-top: 24px; }
+.contact-details .eyebrow { color: var(--gold-dark); }
 .contact-email, .footer-email { max-width: 100%; overflow-wrap: anywhere; user-select: text; }
 
 @media (max-width: 479px) { .header-inner { gap: 8px; } .menu-caption { display: none; } .menu-toggle { padding-inline: 0; } }

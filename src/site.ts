@@ -42,7 +42,6 @@ export const site = {
       },
       {
         sector: 'Contratación pública · Bienes',
-        role: 'Participación como árbitro en una controversia por órdenes de compra de más de 5,200 computadoras',
         title: 'Resolución de órdenes de compra de más de 5,200 computadoras',
         description: 'Participación como árbitro en un arbitraje de derecho entre un proveedor y un gobierno regional. La entidad había resuelto dos órdenes de compra de equipos de cómputo por supuestas discrepancias con la ficha técnica del Catálogo Electrónico. El Tribunal declaró nulas ambas resoluciones, ordenó otorgar la conformidad y pagar S/ 19.5 millones más intereses legales. Desestimó la indemnización de S/ 6.1 millones solicitada por el contratista, y cada parte asumió sus propios gastos y el 50 % de los costos comunes.',
       },
