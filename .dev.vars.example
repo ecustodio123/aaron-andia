@@ -1,0 +1,7 @@
+# Local Pages Functions only. Copy public values from the existing .env.
+VITE_SUPABASE_URL=
+VITE_SUPABASE_PUBLISHABLE_KEY=
+VITE_STORE_ID=
+VITE_STORE_VERIFIED=
+# A server-only service_role JWT or Supabase secret key. Never add VITE_ to this name.
+SUPABASE_SERVICE_ROLE_KEY=

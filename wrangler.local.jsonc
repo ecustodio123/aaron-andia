@@ -1,0 +1,11 @@
+{
+  // Local emulation only; not the production deployment configuration.
+  "name": "aaron-andia-local",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-10-26",
+  "d1_databases": [{
+    "binding": "PUBLICATION_LIMITS",
+    "database_name": "aaron-andia-publication-limits-local",
+    "database_id": "local-publication-limits"
+  }]
+}

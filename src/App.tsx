@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import { navigation, site } from './site'
+import Publications from './components/Publications'
 import { AnimatedMetric } from './components/AnimatedMetric'
 import './App.css'
 
@@ -126,16 +127,6 @@ function PracticeAreas() {
 }
 function InfrastructureBanner() {
   return <aside className="infrastructure" aria-label="Proyectos de infraestructura"><div className="infrastructure-photo"><img src="/images/vision-juridica-1280.webp" srcSet="/images/vision-juridica-640.webp 640w, /images/vision-juridica-960.webp 960w, /images/vision-juridica-1280.webp 1280w" sizes="100vw" loading="lazy" alt="" width="1280" height="960" /></div><div className="container infrastructure-caption"><p>Visión jurídica para<br /><em>proyectos que trascienden.</em></p></div></aside>
-}
-function Publications() {
-  return <section id="publicaciones" className="publications light"><div className="container" data-reveal>
-    <div className="publications-heading"><Label>04 / PERSPECTIVAS</Label><h2 tabIndex={-1}>Publicaciones</h2><p>Análisis y reflexiones sobre arbitraje, contratación pública y mecanismos de resolución de controversias.</p><p className="publications-demo-note" data-nosnippet>Contenido de muestra para maquetación.</p></div>
-    <div className="publication-cards" data-nosnippet>{site.publications.map((item, i) => <article className="publication-card" key={item.url}>
-      <div className="publication-card-meta"><span className="eyebrow">{item.category}</span><span aria-hidden="true">0{i + 1}</span></div>
-      <h3>{item.title}</h3><p>{item.description}</p>
-      <a className="text-link publication-download" href={item.url} download aria-label={`Descargar PDF de muestra: ${item.title}`}>Descargar PDF <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" /></svg></a>
-    </article>)}</div>
-  </div></section>
 }
 function Contact() {
   return <section id="contacto" className="contact dark"><div className="container" data-reveal><Label>05 / CONVERSEMOS</Label><div className="contact-grid"><div className="contact-intro"><h2 tabIndex={-1}>Experiencia en controversias complejas.<br /><em>Resultados que importan.</em></h2><p>Asesoría especializada en arbitraje, contratación pública y Dispute Boards.</p></div><div className="contact-details"><p className="eyebrow">Correo electrónico</p><p className="contact-email" data-nosnippet>{site.contact.email}</p><p className="contact-location">{site.location}</p></div></div></div><img className="contact-monogram" src="/brand/aaron-andia-isotipo.svg" alt="" aria-hidden="true" width="704" height="704" loading="lazy" /></section>

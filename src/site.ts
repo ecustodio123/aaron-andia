@@ -59,12 +59,7 @@ export const site = {
     { number: 'III', title: 'Dispute Boards', description: 'Asesoría en la prevención y solución temprana de controversias durante la ejecución de proyectos y obras públicas.' },
   ],
   pillars: ['Análisis jurídico', 'Estrategia contractual', 'Comprensión del proyecto'],
-  // Contenido ficticio autorizado exclusivamente para maquetación. Reemplazar al publicar.
-  publications: [
-    { category: 'Arbitraje', title: 'La estrategia comienza antes del arbitraje', description: 'Una mirada a la preparación del caso, la organización de la evidencia y las decisiones que dan forma a una controversia contractual.', url: '/publicaciones/estrategia-arbitraje-muestra.pdf' },
-    { category: 'Contratación pública', title: 'El contrato público durante la ejecución de obra', description: 'Reflexiones sobre la gestión contractual, la trazabilidad de las decisiones y la prevención de desacuerdos en proyectos de infraestructura.', url: '/publicaciones/contratacion-publica-muestra.pdf' },
-    { category: 'Dispute Boards', title: 'Resolver a tiempo para que el proyecto avance', description: 'Una aproximación al diálogo temprano y al papel de los Dispute Boards en la gestión de controversias durante la ejecución de un proyecto.', url: '/publicaciones/dispute-boards-muestra.pdf' },
-  ],
+
 }
 export const navigation = [
   { id: 'inicio', label: 'Inicio' }, { id: 'sobre-mi', label: 'Perfil' },

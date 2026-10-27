@@ -9,6 +9,3 @@
 
 /404.html
   X-Robots-Tag: noindex
-
-/publicaciones/*
-  X-Robots-Tag: noindex
