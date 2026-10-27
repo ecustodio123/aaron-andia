@@ -31,7 +31,7 @@ Las palabras clave se integran de forma natural. No se añadió `meta keywords`:
 - `robots.txt` permite rastreo y anuncia sitemap. `sitemap.xml` contiene solo la URL canónica real, sin fragmentos ni páginas inexistentes. Actualizar `lastmod` cuando cambie materialmente el contenido, no en cada compilación. [Guía de Google para sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).
 - `404.html` evita el fallback SPA de Cloudflare en rutas inexistentes y usa noindex; no se crean rutas para cada ancla. [Comportamiento de Cloudflare Pages](https://developers.cloudflare.com/pages/configuration/serving-pages/).
 - `_headers` permite caché prolongada exclusivamente de assets con hash. `_redirects` normaliza `/index.html` a `/`.
-- El correo sigue siendo `mail@mail.com` por instrucción del cliente. Su texto visible está marcado `data-nosnippet` para evitar que Google lo use en fragmentos; no se incluye en JSON-LD. Debe reemplazarse por el correo confirmado antes del lanzamiento.
+- El correo sigue siendo `aaron@andiaespinoza.com` por instrucción del cliente. Su texto visible está marcado `data-nosnippet` para evitar que Google lo use en fragmentos; no se incluye en JSON-LD. Debe reemplazarse por el correo confirmado antes del lanzamiento.
 
 ## Validación reproducible
 

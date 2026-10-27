@@ -165,9 +165,10 @@
 }
 
 /* Official AA + name lockup, without the gold rule or service descriptors. */
-.brand img { display: block; width: auto; height: 60px; object-fit: contain; }
-.footer .brand img { height: 120px; filter: brightness(0) invert(1); }
-@media (min-width: 1200px) { .header .brand img { height: 72px; } }
+.brand img { display: block; width: auto; height: 160px; object-fit: contain; }
+.footer .brand { width: min(340px, 100%); }
+.footer .brand img { height: auto; width: 100%; filter: brightness(0) invert(1); }
+@media (min-width: 1200px) { .header .brand img { height: 160px; } }
 
 /* Profile and experience — content supplied in the institutional brochure. */
 .profile-grid { display: grid; gap: 32px; align-items: start; }
@@ -175,8 +176,8 @@
 .profile-portrait img { width: 100%; max-width: 360px; height: auto; aspect-ratio: 900 / 1374; object-fit: cover; }
 .portrait-caption { display: block; margin-top: 14px; color: var(--gold-dark); font-size: 11px; letter-spacing: .12em; }
 .profile-heading h2 { margin-top: 24px; }
-.profile-copy > p { color: var(--gray); margin-bottom: 20px; }
-.profile-copy > p:first-of-type { color: #363630; font-size: 18px; }
+.profile-copy > p { color: var(--gray); font-size: 18px; width: 100%; max-width: none; margin-bottom: 20px; text-align: justify; text-align-last: left; -webkit-hyphens: auto; hyphens: auto; }
+.profile-copy > p:first-of-type { color: #363630; }
 .profile-education { margin: 28px 0 16px; border-block: 1px solid #d8c9a7; }
 .profile-education summary { display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 56px; padding-block: 16px; font-size: 14px; font-weight: 500; cursor: pointer; list-style: none; }
 .profile-education summary::-webkit-details-marker { display: none; }
@@ -227,8 +228,6 @@
   .profile-grid { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 8.333%; }
   .profile-portrait img { max-width: none; }
   .profile-heading h2 { margin-top: 28px; }
-  .profile-copy > p { font-size: 17px; }
-  .profile-copy > p:first-of-type { font-size: 18px; }
   .profile-approach { grid-template-columns: 5fr 6fr; gap: 8.333%; margin-top: 64px; padding-top: 40px; }
   .profile-approach h3 { font-size: 34px; }
   .experience-heading h2 { max-width: none; }
@@ -288,7 +287,7 @@
   .profile-portrait { width: min(100%, 280px); margin-inline: auto; }
   .profile-portrait img { max-width: none; }
   .portrait-caption { text-align: center; }
-  .footer .brand img { height: 100px; }
+  .footer .brand img { width: 100%; }
   .footer nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 16px; align-items: stretch; }
   .footer nav a { width: 100%; }
 }
@@ -320,3 +319,5 @@
 .contact-details { align-self: center; border-top: 1px solid #514730; padding-top: 24px; }
 .contact-details .eyebrow { color: #cbb47f; }
 .contact-email, .footer-email { max-width: 100%; overflow-wrap: anywhere; user-select: text; }
+
+@media (max-width: 479px) { .header-inner { gap: 8px; } .menu-caption { display: none; } .menu-toggle { padding-inline: 0; } }

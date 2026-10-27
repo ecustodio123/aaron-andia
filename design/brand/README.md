@@ -12,7 +12,7 @@ En `public/brand/`:
 - `aaron-andia-isotipo.svg`: trazado geométrico de las dos AA a partir de la referencia; usado para el favicon y la decoración de Contacto.
 - `isotipo-32.png`, `isotipo-180.png`, `isotipo-192.png`, `isotipo-512.png`: exportaciones del SVG para pestaña y dispositivos; 180 sobre blanco para Apple Touch Icon.
 
-El favicon raíz `public/favicon.svg` usa el isotipo y adapta su tinta a preferencias claras/oscuras. El header muestra el logo oscuro; el footer usa el mismo archivo con filtro CSS blanco, evitando descargar una segunda copia. La foto original permanece sin modificaciones en esta carpeta de diseño.
+El favicon raíz `public/favicon.svg` usa el isotipo y adapta su tinta a preferencias claras/oscuras. El header muestra el logo completo en negro y dorado, sin fondo. El footer usa el mismo logo completo en blanco, también sin fondo. La foto original permanece sin modificaciones en esta carpeta de diseño.
 
 ## Método y prompts
 
@@ -31,3 +31,15 @@ Prompt de isotipo:
 Reemplazos en componente Brand (header/footer), favicon/Apple Touch Icon y monograma decorativo de Contacto. H1 y textos de la landing se mantienen como contenido, sin convertirlos en imágenes. Se retiró Cormorant de la carga remota al dejar de utilizarse como marca tipográfica.
 
 Build, lint y TypeScript correctos. Logo renderizado en navegador con transparencia; versión clara verificada sobre footer negro. No overflow en la vista disponible. Cambios locales en main, sin commit/push/deploy.
+
+## Logo completo (actualización solicitada por el cliente)
+
+`public/brand/aaron-andia-logo-completo.svg` incorpora el JPEG original sin modificar sus píxeles dentro de un contenedor SVG con encuadre ajustado. Conserva AA, nombre, línea dorada, profesión y especialidades. No es una vectorización. Se utiliza en header, footer y página 404. El footer lo presenta sobre un panel blanco para preservar los colores originales. Se ajustaron las alturas del header y los desplazamientos de navegación. Los recursos de favicon e isotipo no se modificaron.
+
+## Transparencia y footer blanco
+
+Se retiró el panel blanco. `public/brand/aaron-andia-logo-completo-transparente.svg` conserva el JPEG original incrustado y elimina el papel mediante un filtro alfa SVG, sin redibujar los trazos ni los textos. El footer y la página 404 aplican el filtro CSS blanco que se utilizaba previamente. El favicon no cambia.
+
+## Legibilidad de la línea de especialidades
+
+La línea inferior se presenta ahora como texto SVG nítido, con el mismo contenido y una tinta dorada de mayor contraste en el encabezado. Se amplió el logo del encabezado y del footer. Las AA, el nombre y la línea de profesión conservan la imagen original; el logo del footer continúa blanco y sin fondo. Se verificó que el menú no se superpone al logo en móvil de 320 px.

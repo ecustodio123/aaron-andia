@@ -5,7 +5,7 @@ import './App.css'
 
 function Arrow() { return <span className="arrow" aria-hidden="true">↗</span> }
 function Brand() {
-  return <a className="brand" href="#inicio" aria-label="Aarón Andía, inicio"><img src="/brand/aaron-andia-logo.svg" width="1260" height="708" alt={site.name} /></a>
+  return <a className="brand" href="#inicio" aria-label="Aarón Andía, inicio"><img src="/brand/aaron-andia-logo-completo-transparente.svg" width="1064" height="750" alt="Aarón Andía, abogado y árbitro. Arbitraje, contratación pública y Dispute Boards" /></a>
 }
 function Label({ children }: { children: React.ReactNode }) {
   return <div className="section-label"><span className="gold-rule" aria-hidden="true" />{children}</div>
@@ -35,16 +35,16 @@ function Header() {
     const desktop = matchMedia(desktopQuery)
     let observer: IntersectionObserver
     const observe = () => {
+      const offset = (header.current?.getBoundingClientRect().height ?? 128) + 16
       observer?.disconnect()
       observer = new IntersectionObserver(() => {
-        const offset = desktop.matches ? 104 : 88
         let current = 'inicio'
         navigation.forEach(item => {
           const section = document.getElementById(item.id)
           if (section && section.getBoundingClientRect().top <= offset + 1) current = item.id
         })
         setActive(current)
-      }, { rootMargin: `-${desktop.matches ? 104 : 88}px 0px -45% 0px`, threshold: 0 })
+      }, { rootMargin: `-${offset}px 0px -45% 0px`, threshold: 0 })
       navigation.forEach(item => { const el = document.getElementById(item.id); if (el) observer.observe(el) })
     }
     const onBreakpoint = () => { setOpen(false); observe() }
@@ -82,7 +82,7 @@ function Header() {
 
   return <header ref={header} className={`header${scrolled ? ' has-scrolled' : ''}`}>
     <div className="header-inner"><Brand />
-      <button ref={toggle} className="menu-toggle" aria-expanded={open} aria-controls="main-navigation" aria-label={open ? 'Cerrar menú' : 'Abrir menú'} onClick={() => setOpen(!open)}><span className="menu-symbol" aria-hidden="true">{open ? '×' : '☰'}</span>{open ? 'Cerrar' : 'Menú'}</button>
+      <button ref={toggle} className="menu-toggle" aria-expanded={open} aria-controls="main-navigation" aria-label={open ? 'Cerrar menú' : 'Abrir menú'} onClick={() => setOpen(!open)}><span className="menu-symbol" aria-hidden="true">{open ? '×' : '☰'}</span><span className="menu-caption">{open ? 'Cerrar' : 'Menú'}</span></button>
       <nav id="main-navigation" hidden={!isDesktop && !open} className={`navigation${open ? ' is-open' : ''}`} aria-label="Navegación principal">
         {navigation.map(item => <a key={item.id} href={`#${item.id}`} aria-current={active === item.id ? 'location' : undefined} onClick={() => { setOpen(false); setActive(item.id); focusSection(item.id) }}>{item.label}</a>)}
       </nav>

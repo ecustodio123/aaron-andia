@@ -49,7 +49,7 @@ check('Datos estructurados coherentes', () => {
   }
   references(data)
   assert.equal(data['@graph'].filter(node => node['@type'] === 'Service').length, 3)
-  assert.ok(!json.includes('mail@mail.com'))
+  assert.ok(!json.includes('aaron@andiaespinoza.com'))
   assert.ok(!json.includes('aggregateRating'))
 })
 for (const match of html.matchAll(/(?:src|href)="(\/(?:assets|images|brand)\/[^"?#]+)[^" ]*"/g)) await access(`dist${match[1]}`)

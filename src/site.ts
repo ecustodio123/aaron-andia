@@ -1,6 +1,6 @@
 export const site = {
   name: 'Aarón Andía', subtitle: 'ABOGADO | ÁRBITRO', // Perfil y trayectoria: brochure institucional 2026, pp. 2, 4 y 5.
-  contact: { email: 'mail@mail.com', linkedin: 'https://www.linkedin.com/in/aaron-andia-espinoza/' }, // Correo temporal: reemplazar al confirmar el definitivo.
+  contact: { email: 'aaron@andiaespinoza.com', linkedin: 'https://www.linkedin.com/in/aaron-andia-espinoza/' }, // Correo temporal: reemplazar al confirmar el definitivo.
   location: 'Lima, Perú', // Ciudad indicada en el brochure institucional 2026.
   hero: 'Resolución estratégica de controversias en proyectos públicos e infraestructura',
   about: ['Consultoría especializada en la prevención y resolución de controversias vinculadas a la contratación pública y a los proyectos de infraestructura.', 'Un enfoque que integra el análisis jurídico, la estrategia contractual y la comprensión de los desafíos técnicos de cada proyecto.'],
