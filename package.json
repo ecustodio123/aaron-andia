@@ -14,7 +14,9 @@
     "dev:pages": "wrangler pages dev --config wrangler.local.jsonc",
     "check:functions": "wrangler pages functions build --outdir .wrangler/build",
     "db:local": "wrangler d1 execute PUBLICATION_LIMITS --local --config wrangler.local.jsonc --file migrations/d1/0001_publication_download_limits.sql",
-    "dev:publications-fixture": "node tests/preview-publications.mjs"
+    "dev:publications-fixture": "node tests/preview-publications.mjs",
+    "validate:publications": "npm run test:publications && npm run lint && npm run typecheck && npm run build && npm run check:functions && npm run check:deployment",
+    "check:deployment": "node scripts/check-publications-deployment.mjs"
   },
   "dependencies": {
     "@fontsource-variable/newsreader": "^5.3.0",
@@ -31,5 +33,8 @@
     "typescript": "^7.0.2",
     "vite": "^8.3.4",
     "wrangler": "^4.153.0"
+  },
+  "engines": {
+    "node": ">=22.18.0"
   }
 }

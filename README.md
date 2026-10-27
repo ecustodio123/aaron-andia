@@ -53,3 +53,9 @@ Debajo del retrato se muestran Brochure y CV. El brochure original está en `pub
 ## Kafka Publications
 
 Copiar las variables existentes según `.env.example`, sin cambiar sus valores. `.env` y `.dev.vars` están excluidos de Git. `npm run test:publications` comprueba aislamiento, publicación, firma y rate limiting; `npm run check:functions` compila el endpoint de Cloudflare. Para emulación completa seguir [la guía de integración](docs/publicaciones-supabase.md). `npm run dev` y `npm run preview` permiten leer las publicaciones; las descargas requieren el runtime de Pages.
+
+## Despliegue de Publicaciones desde GitHub
+
+Producción está conectada a `main` en `ecustodio123/aaron-andia`. Cloudflare Pages usa la raíz del repositorio, `npm run build` y salida `dist`; detecta y compila `functions/` por separado. No copiar `functions/` a `public` ni a `dist`. `.node-version` fija Node 22.23.4, validado con la misma versión que el build de Pages.
+
+Antes de hacer push: `npm run validate:publications`. Incluye tests, lint, TypeScript, build, compilación de Functions y comprobación de rutas/secretos. Configuración de Production y procedimiento de prueba real: [docs/despliegue-publicaciones-pages.md](docs/despliegue-publicaciones-pages.md). No usar `wrangler.local.jsonc` para desplegar producción: los bindings de producción se administran en Cloudflare.
