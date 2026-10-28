@@ -156,7 +156,7 @@
 /* Compact header with the official AA, name and gold rule lockup. */
 .brand img { display: block; width: auto; height: calc(var(--header-height) - 24px); object-fit: contain; }
 .footer .brand { width: min(340px, 100%); }
-.footer .brand img { height: auto; width: 100%; filter: brightness(0) invert(1); }
+.footer .brand img { height: auto; width: 100%; }
 
 /* Profile and experience — content supplied in the institutional brochure. */
 .profile-grid { display: grid; gap: 32px; align-items: start; }
