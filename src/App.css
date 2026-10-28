@@ -172,8 +172,7 @@
 .profile-download:disabled { border-color: #ded8c9; background: var(--warm); color: #777; cursor: default; }
 @media (hover: hover) { a.profile-download:hover { background: #d0b474; border-color: #d0b474; } }
 .profile-heading h2 { margin-top: 24px; }
-.profile-copy > p { color: var(--gray); font-size: 18px; width: 100%; max-width: none; margin-bottom: 20px; text-align: justify; text-align-last: left; -webkit-hyphens: auto; hyphens: auto; }
-.profile-copy > p:first-of-type { color: #363630; }
+.profile-copy > p { color: #363630; font-size: 18px; width: 100%; max-width: none; margin-bottom: 20px; text-align: justify; text-align-last: left; -webkit-hyphens: auto; hyphens: auto; }
 .profile-education { margin: 28px 0 16px; border-block: 1px solid #d8c9a7; }
 .profile-education summary { display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 56px; padding-block: 16px; font-size: 14px; font-weight: 500; cursor: pointer; list-style: none; }
 .profile-education summary::-webkit-details-marker { display: none; }
@@ -325,3 +324,18 @@ button.publication-download:disabled, button.publication-more:disabled { cursor:
 .publication-skeleton > span:first-child { width: 40%; }
 .publication-skeleton > span:nth-child(2) { height: 64px; }
 .publication-skeleton > span:last-child { height: 72px; }
+
+/* Justified body copy keeps headings and short interface labels aligned naturally. */
+.hero-description,
+.profile-copy > p,
+.profile-approach p,
+.practice-item > p,
+.case-description > p,
+.publication-card > p,
+.contact-intro > p,
+.footer-brand > p {
+  text-align: justify;
+  text-align-last: left;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

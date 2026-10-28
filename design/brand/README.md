@@ -4,7 +4,8 @@ Referencia del cliente: `referencia-original.jpeg`. Se conserva como fuente para
 
 ## Recursos activos en public/brand/
 
-- `aaron-andia-logo-completo-transparente.svg`: logo completo del encabezado, footer y página 404. Contiene el JPEG original con filtro de transparencia; no es una vectorización completa. La línea de especialidades está compuesta como texto SVG para mejorar su legibilidad. El footer y la página 404 lo muestran en blanco mediante CSS.
+- `aaron-andia-logo-completo-transparente.svg`: logo del encabezado y página 404 con AA, nombre y línea dorada. Está compuesto íntegramente por trazados SVG, sin imágenes embebidas ni filtros de transparencia. El nombre se vectorizó desde la referencia original y las AA reutilizan el trazado del isotipo.
+- `aaron-andia-logo-completo-blanco.svg`: versión completa blanca sobre fondo transparente para el footer, incluidos los textos inferiores. Conserva la imagen original con filtros SVG.
 - `aaron-andia-isotipo.svg`: trazado de las AA, utilizado como decoración en Contacto y como fuente del favicon.
 - `isotipo-32.png`: alternativa PNG del favicon.
 - `isotipo-180.png`: icono para Apple Touch Icon, sobre blanco.
@@ -15,4 +16,4 @@ Las versiones parciales del logo, el logo con papel blanco, los PNG de pruebas y
 
 ## Aplicación
 
-El componente `Brand` está en `src/App.tsx`; tamaños, versión blanca y comportamiento responsive están en `src/App.css`. Las alturas de navegación se definen en `src/index.css`. Las palabras de la línea inferior del logo permanecen en el SVG y deben conservar los acentos.
+El componente `Brand` está en `src/App.tsx`; tamaños, versión blanca y comportamiento responsive están en `src/App.css`. Las alturas de navegación se definen en `src/index.css`. La versión del encabezado no incluye los descriptores inferiores; la versión completa del footer sí los conserva.
