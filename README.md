@@ -24,7 +24,7 @@ Hero: fotografía de obra proporcionada por el cliente el 26/10/2026, optimizada
 ## Cloudflare Pages
 
 Comando de compilación: `npm run build`. Directorio de salida: `dist`.
-La landing se sirve estáticamente; las descargas de Kafka Publications requieren Pages Functions y un binding D1. Las variables públicas se configuran para el build y las credenciales privilegiadas solo en el servidor. Dominio canónico: `https://www.andiaespinoza.com/`. Metadatos y datos estructurados: `src/seo.ts`. Conectar el dominio y configurar las redirecciones de host en Cloudflare antes del lanzamiento.
+La landing se sirve estáticamente; las descargas de Kafka Publications requieren Pages Functions y un binding D1. Las variables públicas se configuran para el build y las credenciales privilegiadas solo en el servidor. Dominio canónico: `https://www.andiaespinoza.com/`. Metadatos y datos estructurados: `src/seo.ts`. El dominio con www ya sirve la landing; queda configurar la redirección permanente del host sin www al host canónico en Cloudflare.
 
 ## Vista previa al compartir
 

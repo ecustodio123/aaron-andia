@@ -12,9 +12,9 @@ function meta(key) {
 check('Dominio y metadatos', () => {
   assert.match(html, /<html lang="es-PE">/)
   assert.equal((head.match(/<title>/g) ?? []).length, 1)
-  assert.match(head, /<title>Aarón Andía.*Perú<\/title>/)
+  assert.ok(head.includes('<title>Aarón Andía | Abogado y Árbitro en Lima, Perú</title>'))
   assert.equal((head.match(/name="description"/g) ?? []).length, 1)
-  assert.ok(meta('description')?.length > 100)
+  assert.ok(meta('description')?.length > 100 && meta('description').length <= 160)
   assert.equal((head.match(/rel="canonical"/g) ?? []).length, 1)
   assert.ok(head.includes(`rel="canonical" href="${origin}"`))
   assert.equal(meta('og:url'), origin)

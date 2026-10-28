@@ -2,8 +2,8 @@ import { site } from './site.ts'
 
 export const seo = {
   url: 'https://www.andiaespinoza.com/',
-  title: 'Aarón Andía | Arbitraje y Contratación Pública en Perú',
-  description: 'Abogado y árbitro en Perú. Asesoría en arbitraje, contratación pública y Dispute Boards para prevenir y resolver controversias en infraestructura.',
+  title: 'Aarón Andía | Abogado y Árbitro en Lima, Perú',
+  description: 'Aarón Andía, abogado y árbitro en Lima, Perú. Asesoría en arbitraje, contratación pública y Dispute Boards para controversias en infraestructura.',
   imagePath: 'images/aaron-andia-social.png',
   imageAlt: 'Aarón Andía, abogado y árbitro. Arbitraje, contratación pública y Dispute Boards en Perú.',
 }
@@ -32,14 +32,14 @@ export const structuredData = {
     },
     {
       '@type': 'Person', '@id': personId,
-      name: site.name, url: seo.url, jobTitle: 'Abogado y árbitro',
+      name: site.name, alternateName: 'Aarón Andía Espinoza', url: seo.url, jobTitle: 'Abogado y árbitro',
       description: site.profile.paragraphs[0],
       image: new URL('images/aaron-andia-retrato.webp', seo.url).href,
       sameAs: [site.contact.linkedin],
       knowsAbout: ['Arbitraje', 'Contratación pública', 'Dispute Boards', 'Derecho de la construcción', 'Obras por Impuestos', 'Asociaciones Público-Privadas'],
       alumniOf: { '@type': 'CollegeOrUniversity', name: 'UPC' },
       workLocation: { '@type': 'Place', name: site.location },
-      // El correo temporal no representa una dirección profesional confirmada.
+      // El correo se muestra en Contacto y se omite del marcado para evitar su difusión adicional.
     },
     ...site.practices.map((practice, i) => ({
       '@type': 'Service', '@id': `${seo.url}#servicio-${serviceIds[i]}`,
